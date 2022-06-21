@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark-bg: theme("colors.blackblue");
+  --light-bg: #fff;
+  --dark-mode-text: #f4f4f4;
+  --dark-mode-border: rgba(255,255,255,.25);
+  --dark-text: theme("colors.blackblue");
+
+  --color-text: theme("colors.gray.800");
+  --color-bg: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--dark-bg);
+    --color-border: var(--dark-mode-border);
+    --color-border-hover: var(--dark-mode-border);
+    --color-heading: var(--dark-mode-text);
+    --color-text: var(--dark-mode-text);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-size: theme("fontSize.base");
+  @apply font-sans;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { 
+  @apply max-w-full block;
+}
+
+header {
+  @apply bg-gray-100;
+}
+
+h3 {
+  @apply font-semibold text-xl drop-shadow-[1px_1px_0px_#fff];
+}
+
+h4 {
+  @apply font-normal text-gray-800 text-sm tracking-wide
+}
+
+code, kbd, samp, pre {
+  @apply text-sm my-4;
+}
+
+p {
+  @apply mb-6
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  
+  #app, a, .card-image a img, .btn-switch, .btn-switch::before {
+    transition: all .2s ease-in-out;
+  }
+}

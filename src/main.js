@@ -58,7 +58,7 @@ const router = createRouter({
     ]
   })
 
-import { faEnvelope, faFilePdf, faLongArrowAltRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faFilePdf, faLongArrowAltRight, faExternalLinkAlt, faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
@@ -68,7 +68,9 @@ library.add(
     faInstagram,
     faGithub,
     faLongArrowAltRight,
-    faExternalLinkAlt)
+    faExternalLinkAlt,
+    faSun,
+    faMoon)
 
 createApp(App)
 .use(router)

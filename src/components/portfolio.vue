@@ -12,7 +12,7 @@
 
         <thumbnailVue
         link="/inmo"
-        image="inmo.png"
+        image="inmo.jpg"
         title="This is INMO+"
         features="CSS, Javascript, Custom SVG Animation, Scroll Interaction" />
 

@@ -30,18 +30,28 @@
 
 <style>
     .project-card {
-        @apply relative rounded-md bg-white border border-white border-8 drop-shadow-2xl;
+        @apply relative rounded-md bg-white border-white border border-8 drop-shadow-2xl;
     }
-
     .card-image {
         @apply relative h-64 rounded-t-md overflow-hidden;
     }
-
     .card-image a:hover img {
         @apply opacity-75;
     }
-
+    .card-title a {
+        @apply border-b border-transparent hover:border-aqua
+    }
     .card-body {
-        @apply z-10 text-darkblue p-4;
+        @apply z-10 p-4;
+    }
+
+    .dark .project-card {
+        @apply bg-darkblue bg-opacity-75 border-darkblue;
+    }
+    .dark .card-body {
+        @apply text-gray-50
+    }
+    .dark .card-title {
+        @apply filter-none
     }
 </style>

@@ -5,25 +5,10 @@
 @tailwind utilities;
 
 :root {
-  --dark-bg: theme("colors.blackblue");
-  --light-bg: #fff;
-  --dark-mode-text: #f4f4f4;
-  --dark-mode-border: rgba(255,255,255,.25);
-  --dark-text: theme("colors.blackblue");
-
-  --color-text: theme("colors.gray.800");
-  --color-bg: #fff;
+  --h4-fw: 400;
+  --h4-fs: theme("fontSize.sm");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--dark-bg);
-    --color-border: var(--dark-mode-border);
-    --color-border-hover: var(--dark-mode-border);
-    --color-heading: var(--dark-mode-text);
-    --color-text: var(--dark-mode-text);
-  }
-}
 
 *,
 *::before,
@@ -33,8 +18,6 @@
 
 body {
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
   font-size: theme("fontSize.base");
   @apply font-sans;
   text-rendering: optimizeLegibility;
@@ -42,12 +25,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img { 
-  @apply max-w-full block;
+.dark body {
+  @apply bg-blackblue text-gray-50
 }
 
-header {
-  @apply bg-gray-100;
+img { 
+  @apply max-w-full block;
 }
 
 h3 {
@@ -55,7 +38,9 @@ h3 {
 }
 
 h4 {
-  @apply font-normal text-gray-800 text-sm tracking-wide
+  @apply tracking-wide;
+  font-size: var(--h4-fs);
+  font-weight: var(--h4-fw);
 }
 
 code, kbd, samp, pre {
@@ -65,6 +50,14 @@ code, kbd, samp, pre {
 p {
   @apply mb-6
 }
+
+/* dark theme */
+.dark h4 {
+  --h4-fw: 600;
+  --h4-fs: 1rem;
+  @apply opacity-70
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   

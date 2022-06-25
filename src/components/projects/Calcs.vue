@@ -117,9 +117,9 @@
 
         <template #code>
             <h4>Old Calculator</h4>
-            <img src="calc-old.png" alt="Old jQuery UI calculator" class="mb-8" />
+            <img src="/calc-old.png" alt="Old jQuery UI calculator" class="mb-8" />
             <h4>Bootstrap Calculator</h4>
-            <img src="calc.png" alt="Bootstrap calculator" class="mb-8" />
+            <img src="/calc.png" alt="Bootstrap calculator" class="mb-8" />
 
               <h4>HTML</h4>
                <pre v-highlightjs="calcHtml"><code class="html"></code></pre>

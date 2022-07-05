@@ -21,6 +21,9 @@
           <a href="https://www.github.com/haengle" rel="noopener" target="_blank" title="Find me on github">
             <font-awesome-icon icon="fa-brands fa-github" />
           </a>
+          <a href="https://keen-melba-f0a407.netlify.app/" rel="noopener" target="_blank" title="Meet my cats">
+            <font-awesome-icon icon="fa-solid fa-cat" />
+          </a>
       </div>
     </header>
 </template>
